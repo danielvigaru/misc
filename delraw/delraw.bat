@@ -3,6 +3,8 @@ setlocal enabledelayedexpansion
 
 @REM initialising number of deleted NEFs to 0
 SET /A CNEF=0 
+@REM initialising number of deleted DNGs to 0
+SET /A CDNG=0
 @REM initialising number of deleted XMPs to 0
 SET /A CXMP=0
 
@@ -16,6 +18,19 @@ FOR %%N IN (*.NEF) DO (
 		RECYCLE /F "%%N"
 		ECHO !PNEF! DELETED
 		SET /A CNEF+=1
+	)
+)
+
+@REM for every DNG in the current 
+@REM folder check for a corresponding 
+@REM JPG, if not found, delete DNG
+FOR %%N IN (*.DNG) DO (
+	SET PDNG=%%N
+	SET PJPG=!PDNG:DNG=JPG!
+	IF NOT EXIST "!PJPG!" ( 
+		RECYCLE /F "!PDNG!"
+		ECHO !PDNG! DELETED
+		SET /A CDNG+=1
 	)
 )
 
@@ -35,6 +50,7 @@ FOR %%X IN (*.xmp) DO (
 ECHO .
 ECHO .
 ECHO .
+ECHO DNG FILES DELETED: !CDNG!
 ECHO NEF FILES DELETED: !CNEF!
 ECHO XMP FILES DELETED: !CXMP!
 PAUSE
