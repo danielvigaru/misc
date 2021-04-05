@@ -36,7 +36,7 @@ if (movieId) {
   icon_rarbg.style.border = 'solid 2px black';
   icon_rarbg.style.borderRadius = '7px';
   icon_rarbg.style.textDecoration = 'none';
-  icon_rarbg.style.fontSize = '0.8em';
+  icon_rarbg.style.fontSize = '1em';
   icon_rarbg.style.fontFamily = 'Calibri';
 
   icon_rarbg.href = 'https://rarbgmirror.org/torrents.php?imdb=' + movieId;
@@ -61,7 +61,7 @@ if (movieId) {
   icon_filelist.style.border = 'solid 2px black';
   icon_filelist.style.borderRadius = '7px';
   icon_filelist.style.textDecoration = 'none';
-  icon_filelist.style.fontSize = '0.8em';
+  icon_filelist.style.fontSize = '1em';
   icon_filelist.style.fontFamily = 'Calibri';
   icon_filelist.href = 'https://filelist.io/browse.php?search=' + movieId;
   icon_filelist.target = '_blank';
@@ -85,7 +85,7 @@ if (movieId) {
   icon_trakt.style.border = 'solid 2px black';
   icon_trakt.style.borderRadius = '7px';
   icon_trakt.style.textDecoration = 'none';
-  icon_trakt.style.fontSize = '0.8em';
+  icon_trakt.style.fontSize = '1em';
   icon_trakt.style.fontFamily = 'Calibri';
   icon_trakt.href = 'https://trakt.tv/search/imdb?q=tt' + movieId;
   icon_trakt.target = '_blank';
