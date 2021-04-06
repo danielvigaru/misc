@@ -3,7 +3,7 @@
 // @description      Links to torrents and trakt directly from imdb page
 // @license          MIT
 // @include          https://www.imdb.com/*
-// @version          1.1
+// @version          1.1.1
 // @updateURL        https://github.com/danielvigaru/misc/raw/main/userscripts/imdb.js
 // @grant            none
 // ==/UserScript==
@@ -61,7 +61,7 @@ if (movieId) {
   icon_filelist.style.textDecoration = 'none';
   icon_filelist.style.fontSize = '0.8em';
   icon_filelist.style.fontFamily = "'Roboto','Helvetica','Arial',sans-serif";
-  icon_filelist.href = 'https://filelist.io/browse.php?search=' + movieId;
+  icon_filelist.href = 'https://filelist.io/browse.php?search=tt' + movieId;
   icon_filelist.target = '_blank';
 
   // trakt
