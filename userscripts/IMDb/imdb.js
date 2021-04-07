@@ -4,7 +4,7 @@
 // @license          MIT
 // @include          https://www.imdb.com/*
 // @version          1.1.1
-// @updateURL        https://github.com/danielvigaru/misc/raw/main/userscripts/imdb.js
+// @updateURL        https://github.com/danielvigaru/misc/raw/main/userscripts/IMDb/imdb.js
 // @grant            none
 // ==/UserScript==
 
