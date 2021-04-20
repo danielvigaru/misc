@@ -3,7 +3,7 @@
 // @description      Links to torrents and trakt directly from imdb page
 // @license          MIT
 // @include          https://www.imdb.com/*
-// @version          1.1.1
+// @version          1.1.2
 // @updateURL        https://github.com/danielvigaru/misc/raw/main/userscripts/IMDb/imdb.js
 // @grant            none
 // ==/UserScript==
@@ -38,7 +38,7 @@ if (movieId) {
   icon_rarbg.style.textDecoration = 'none';
   icon_rarbg.style.fontSize = '0.8em';
   icon_rarbg.style.fontFamily = "'Roboto','Helvetica','Arial',sans-serif";
-  icon_rarbg.href = 'https://rarbgmirror.org/torrents.php?imdb=' + movieId;
+  icon_rarbg.href = 'https://rarbgmirror.org/torrents.php?imdb=tt' + movieId;
   icon_rarbg.target = '_blank';
 
   // filelist
