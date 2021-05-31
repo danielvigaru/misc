@@ -3,13 +3,13 @@
 // @description      Links to torrents and trakt directly from imdb page
 // @license          MIT
 // @include          https://www.imdb.com/*
-// @version          1.1.2
+// @version          1.1.3
 // @updateURL        https://github.com/danielvigaru/misc/raw/main/userscripts/IMDb/imdb.js
 // @grant            none
 // ==/UserScript==
 
 function getIMDBid() {
-  let regexImdbNum = /\/title\/tt(\d{7})\//;
+  let regexImdbNum = /\/title\/tt(?:0*)(\d{7})\//;
   let id = regexImdbNum.exec(document.location);
   return id[1];
 }
