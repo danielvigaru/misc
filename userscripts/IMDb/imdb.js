@@ -14,7 +14,7 @@ function getIMDBid() {
   return id[1];
 }
 
-var movieId = getIMDBid();
+let movieId = getIMDBid();
 
 if (movieId) {
 
