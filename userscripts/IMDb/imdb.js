@@ -3,7 +3,7 @@
 // @description      Links to torrents and trakt directly from imdb page
 // @license          MIT
 // @include          https://www.imdb.com/*
-// @version          2.0.0
+// @version          2.1.0
 // @updateURL        https://github.com/danielvigaru/misc/raw/main/userscripts/IMDb/imdb.js
 // @grant            none
 // ==/UserScript==
@@ -24,14 +24,12 @@ if (movieId) {
   let linkTrakt = `${linkConstructor} href='https://trakt.tv/search/imdb?q=tt${movieId}'">Trakt</a>`
 
   let links = document.createElement('div');
-  links.innerHTML = `${linkRarbg} | ${linkFilelist} | ${linkTrakt}`
-  links.style.display = "block";
-  links.style.position = "absolute";
-  links.style.left = "1rem";
-  links.style.top = "4.6rem";
+  links.innerHTML = `${linkTrakt} | ${linkFilelist} | ${linkRarbg}`
   links.style.fontFamily = "'Roboto','Helvetica','Arial',sans-serif";
-  links.style.zIndex = '9999';
+  links.style.padding = '0.5em 1em';
 
-  document.body.appendChild(links);
+  let banner = document.querySelector('.banner');
+  banner.innerHTML = ''; // clear the content of the banner
+  banner.appendChild(links);
 
 }
