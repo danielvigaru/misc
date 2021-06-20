@@ -9,6 +9,7 @@
 
 @REM adb shell pm disable-user --user 0 com.android.thememanager @REM Themes - can't set wallpaper if disabled
 adb shell pm disable-user --user 0 com.android.mms
+adb shell pm disable-user --user 0 com.android.chrome @REM Chrome
 adb shell pm disable-user --user 0 com.facebook.appmanager
 adb shell pm disable-user --user 0 com.facebook.services
 adb shell pm disable-user --user 0 com.facebook.system
