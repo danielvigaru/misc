@@ -1,9 +1,10 @@
 // ==UserScript==
 // @name             IMDB links
+// @icon             https://www.imdb.com/favicon.ico
 // @description      Links to torrents and trakt directly from imdb page
 // @license          MIT
 // @include          https://www.imdb.com/*
-// @version          2.3.0
+// @version          2.3.1
 // @updateURL        https://github.com/danielvigaru/misc/raw/main/userscripts/IMDb/imdb.js
 // @grant            none
 // ==/UserScript==
