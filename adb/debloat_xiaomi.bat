@@ -28,5 +28,7 @@ adb shell pm disable-user --user 0 com.miui.yellowpage
 adb shell pm disable-user --user 0 com.xiaomi.calendar @REM Calendar
 adb shell pm disable-user --user 0 com.xiaomi.joyose
 adb shell pm disable-user --user 0 com.xiaomi.midrop @REM ShareMe
+adb shell pm disable-user --user 0 com.google.android.apps.tachyon @REM Duo
+@REM adb shell pm disable-user --user 0 com.google.android.googlequicksearchbox @REM Google
 
 pause
