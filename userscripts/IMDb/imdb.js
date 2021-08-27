@@ -6,6 +6,7 @@
 // @include          https://www.imdb.com/*
 // @version          2.3.2
 // @updateURL        https://raw.githubusercontent.com/danielvigaru/imdb.user.js/main/imdb.user.js
+// @downloadURL      https://raw.githubusercontent.com/danielvigaru/imdb.user.js/main/imdb.user.js
 // @grant            none
 // ==/UserScript==
 
