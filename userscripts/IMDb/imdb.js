@@ -4,8 +4,8 @@
 // @description      Links to torrents and trakt directly from imdb page
 // @license          MIT
 // @include          https://www.imdb.com/*
-// @version          2.3.1
-// @updateURL        https://github.com/danielvigaru/misc/raw/main/userscripts/IMDb/imdb.js
+// @version          2.3.2
+// @updateURL        https://raw.githubusercontent.com/danielvigaru/imdb.user.js/main/imdb.user.js
 // @grant            none
 // ==/UserScript==
 
@@ -16,22 +16,20 @@ function getIMDBid() {
 }
 
 window.onload = () => {
-
   let movieId = getIMDBid();
 
   if (movieId) {
+    let linkConstructor =
+      "<a style='text-decoration:none; color:white;' target='_blank'";
+    let linkRarbg = `${linkConstructor} href='https://rarbgmirror.org/torrents.php?imdb=tt${movieId}'">RARBG</a>`;
+    let linkFilelist = `${linkConstructor} href='https://filelist.io/browse.php?search=tt${movieId}'">FileList</a>`;
+    let linkTrakt = `${linkConstructor} href='https://trakt.tv/search/imdb?q=tt${movieId}'">Trakt</a>`;
 
-    let linkConstructor = "<a style='text-decoration:none; color:white;' target='_blank'"
-    let linkRarbg = `${linkConstructor} href='https://rarbgmirror.org/torrents.php?imdb=tt${movieId}'">RARBG</a>`
-    let linkFilelist = `${linkConstructor} href='https://filelist.io/browse.php?search=tt${movieId}'">FileList</a>`
-    let linkTrakt = `${linkConstructor} href='https://trakt.tv/search/imdb?q=tt${movieId}'">Trakt</a>`
-
-    let links = document.createElement('div');
-    links.innerHTML = `${linkTrakt} | ${linkFilelist} | ${linkRarbg}`
+    let links = document.createElement("div");
+    links.innerHTML = `${linkTrakt} | ${linkFilelist} | ${linkRarbg}`;
     links.style.fontFamily = "'Roboto','Helvetica','Arial',sans-serif";
 
-    let banner = document.querySelector('.SubNav__SubNavContent-sc-11106ua-3');
+    let banner = document.querySelector(".SubNav__SubNavContent-sc-11106ua-3");
     banner.prepend(links);
-
   }
-}
+};
